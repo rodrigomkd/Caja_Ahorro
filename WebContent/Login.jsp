@@ -1,10 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="com.caja_ahorro.conexion.Conectar"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%
-	String user = "";
-	String password = "";
+String usuario = request.getParameter("username");
+String contrasenia = request.getParameter("contrasena");
+if(usuario != null && contrasenia != null){
+	Conectar con = new Conectar();
+	int idsocio = con.isLogin(usuario, contrasenia);	
+}
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
