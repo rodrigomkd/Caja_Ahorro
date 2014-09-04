@@ -8,53 +8,139 @@
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
- <link rel="stylesheet" type="text/css" href="css/demo.css">
-    <link rel="stylesheet" type="text/css" href="form-kit/css/style.css">
-    <link rel="stylesheet" type="text/css" href="form-kit/css/uniform.css">
+
+<title>lOGIN</title>
+ <link href="form-kit/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="form-kit/css/uniform.css" media="screen" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script type="text/javascript" src="form-kit/js/jquery.tools.js"></script>
+    <script type="text/javascript" src="jform-kit/s/jquery.tools.js"></script>
     <script type="text/javascript" src="form-kit/js/jquery.uniform.min.js"></script>
     <script type="text/javascript" src="form-kit/js/main.js"></script>
-<title>Insert title here</title>
 </head>
-<body class="wrapped">
+<body>
 
 <div class="TTWForm-container">
 
-    <div class="TTWForm-wrapper wrapped">
-<form action="" method="POST" name="formulario" id="formulario">
+    <div class="TTWForm-wrapper">
 
-	<table>
-		<tr>
-			<td>
-				<div id="field1-container" class="field f_100">
+
+        <form enctype="multipart/form-data" action="process_form.php" class="TTWForm clearfix"
+              method="post" novalidate="">
+
+
+            <div id="field1-container" class="field f_100">
                 <label for="field1">
                     Text Field
                 </label>
                 <input name="field1" id="field1" required="required" type="text">
             </div>
-			</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td><b>Usuario:</b></td>
-			<td><input  name="username" type="text"  class="login-inp" value="<%=user%>"/></td>
-		</tr>
-		<tr>
-			<td><b>Contrasena:</b></td>
-			<td><input  name="username" type="password"  class="login-inp" value="<%=user%>"/></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>
-				<div id="form-submit" class="field f_100 clearfix submit">
+
+
+            <div id="field2-container" class="field f_100">
+                <label for="field2">
+                    Text Area
+                </label>
+                <textarea rows="5" cols="20" name="field2" id="field2" required="required"></textarea>
+            </div>
+
+
+            <div id="field3-container" class="field f_100">
+                <label for="field3">
+                    Select
+                </label>
+                <select name="field3" id="field3" required="required">
+                    <option id="field3-1" value="Option 1">
+                        Option 1
+                    </option>
+                    <option id="field3-2" value="Option 2">
+                        Option 2
+                    </option>
+                    <option id="field3-3" value="Option 3">
+                        Option 3
+                    </option>
+                </select>
+            </div>
+
+
+            <div id="field6-container" class="field f_100">
+                <label for="field6">
+                    File
+                </label>
+                <input size="48" name="field6" id="field6" required="required" type="file">
+            </div>
+
+
+            <div id="field4-container" class="field f_100 radio-group required">
+                <label for="field4-1">
+                    Radio Buttons
+                </label>
+
+
+                <div class="option clearfix">
+                    <input name="field4" id="field4-1" value="Option 1" type="radio">
+                    <span class="option-title">
+                         Option 1
+                    </span>
+                </div>
+
+
+                <div class="option clearfix">
+                    <input name="field4" id="field4-2" value="Option 2" type="radio">
+                    <span class="option-title">
+                         Option 2
+                    </span>
+                </div>
+
+
+                <div class="option clearfix">
+                    <input name="field4" id="field4-3" value="Option 3" type="radio">
+                    <span class="option-title">
+                         Option 3
+                    </span>
+                </div>
+            </div>
+
+
+            <div id="field5-container" class="field f_100 checkbox-group required">
+                <label for="field5-1">
+                    Checkboxes
+                </label>
+
+
+                <div class="option clearfix">
+                    <input name="field5[]" id="field5-1" value="Option 1" type="checkbox">
+                    <span class="option-title">
+                         Option 1
+                    </span>
+                    <br>
+                </div>
+
+
+                <div class="option clearfix">
+                    <input name="field5[]" id="field5-2" value="Option 2" type="checkbox">
+                    <span class="option-title">
+                         Option 2
+                    </span>
+                    <br>
+                </div>
+
+
+                <div class="option clearfix">
+                    <input name="field5[]" id="field5-3" value="Option 3" type="checkbox">
+                    <span class="option-title">
+                         Option 3
+                    </span>
+                    <br>
+                </div>
+            </div>
+
+
+            <div id="form-submit" class="field f_100 clearfix submit">
                 <input value="Submit" type="submit">
             </div>
-			</td>
-		</tr>
-	</table>
-	</form>
-	</div>
-	</div>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
